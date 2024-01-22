@@ -2,27 +2,125 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hokecy</title>
-    <!-- tailwind and daisy UI link -->
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- custom tailwind -->
-    <script>
-        tailwind.config = {
-          theme: {
-            extend: {
-              colors: {
-                clifford: '#da373d',
-              }
-            }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hokecy</title>
+  <!-- tailwind and daisy UI link -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- custom tailwind -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'color': '#FF4240',
           }
         }
-      </script>
+      }
+    }
+  </script>
+  <!-- font awesome link -->
+  <script src="https://kit.fontawesome.com/bb50917422.js" crossorigin="anonymous"></script>
+  <!-- google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;800&display=swap" rel="stylesheet">
+  <style>
+    .font-manrope {
+      font-family: 'Manrope', sans-serif;
+    }
+  </style>
 </head>
 
-<body>
+<body class="font-manrope px-1">
+  <header class="container mx-auto">
+    <!-- navbar -->
+    <div class="navbar bg-base-100">
+      <div class="navbar-start">
+        <div class="dropdown">
+          <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+            </svg>
+          </div>
+          <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+            <li><a><span class="text-red-500">Home</span></a></li>
+            <li><a>About</a></li>
+            <li><a>Pages</a></li>
+            <li><a>Blog</a></li>
+            <li><a>Contact</a></li>
+
+          </ul>
+        </div>
+        <a class=" font-extrabold text-2xl  lg:text-4xl">Hockey <span class="text-red-500">’</span>s</a>
+      </div>
+      <div class="navbar-center hidden lg:flex text-base font-normal">
+        <ul class="menu menu-horizontal text-base font-normal px-1">
+          <li><a><span class="text-red-500">Home</span></a></li>
+          <li><a>About</a></li>
+          <li><a>Pages</a></li>
+          <li><a>Blog</a></li>
+          <li><a>Contact</a></li>
+
+        </ul>
+      </div>
+      <div class="navbar-end gap-4">
+        <img class="hidden lg:flex" src="Images/Frame.svg" alt="">
+        <a class="btn bg-red-500 text-white">Get Ticket</a>
+      </div>
+    </div>
+    <!-- banner section -->
+    <div class="carousel w-full mt-10 rounded-xl ">
+      <div id="slide1" class="carousel-item relative w-full">
+        <img src="Images/1.png" class="w-full h-[200px] lg:h-[550px]" />
+        <!-- ff -->
+       
+
+        <div class="absolute  transform translate-y-[150px] left-5 right-5   lg:top-1/2 ml-32">
+          <a href="#slide4" class="btn btn-circle text-white bg-black border-none">❮</a>
+          <a href="#slide2" class="btn btn-circle text-white bg-black border-none">❯</a>
+        </div>
+
+      </div>
+      <div id="slide2" class="carousel-item relative w-full">
+        <img src="https://daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.jpg" class="w-full" />
+        <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+          <a href="#slide1" class="btn btn-circle ">❮</a>
+          <a href="#slide3" class="btn btn-circle">❯</a>
+        </div>
+      </div>
+      <div id="slide3" class="carousel-item relative w-full">
+        <img src="https://daisyui.com/images/stock/photo-1414694762283-acccc27bca85.jpg" class="w-full" />
+        <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+          <a href="#slide2" class="btn btn-circle">❮</a>
+          <a href="#slide4" class="btn btn-circle">❯</a>
+        </div>
+      </div>
+      <div id="slide4" class="carousel-item relative w-full">
+        <img src="https://daisyui.com/images/stock/photo-1665553365602-b2fb8e5d1707.jpg" class="w-full" />
+        <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+          <a href="#slide3" class="btn btn-circle">❮</a>
+          <a href="#slide1" class="btn btn-circle">❯</a>
+        </div>
+      </div>
+    </div>
+    <div class="lg:w-[520px]  lg:-translate-y-40 lg:mr-8 rounded-xl p-2 mx-auto bg-black text-white">
+      <h6 class=" text-lg lg:text-2xl font-extrabold">Meet all the heroes from the field</h6>
+      <p class="text-sm lg:text-sm font-thin lg:font-medium  lg:w-[500px]"> There are different varieties of
+        this game played across the globe. The game has many rules that need to be followed by each team so that a
+        fair play can be conducted. </p>
+       </div>
+      
+
+  </header>
+  <main>
+
+  </main>
+  <footer>
+
+  </footer>
 
 </body>
 
